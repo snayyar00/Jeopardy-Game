@@ -1,0 +1,49 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CLUE</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script src="script2.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+
+  </head>
+  <body class="clue">
+
+
+
+	<main>
+		<h1>Final Jeopardy Answer!</h1>
+
+		<pre style="text-align: left;">
+&lt;form action="index.php" method="get"&gt;
+  &lt;input type="checkbox" name="animals[]" value="doggo"&gt;
+  &lt;input type="checkbox" name="animals[]" value="cat"&gt;
+  &lt;input type="submit"&gt;
+&lt;/form&gt;
+
+&lt;?php
+
+if(isset($_GET['animals'])==true)
+{
+	for($i = 0; $i < count($_GET['animals']))
+	{
+
+	  echo $_GET['animals'][$i];
+
+	}
+}
+
+?&gt;
+		</pre>
+
+
+
+	</main>
+
+  </body>
+</html>
